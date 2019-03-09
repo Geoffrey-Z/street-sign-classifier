@@ -1,0 +1,8 @@
+name: street-sign-classifier
+dependencies:
+  - python=3.6
+  - jupyter=1.0.0
+  - matplotlib=3.0.2
+  - pandas=0.24.1
+  - keras=2.2.4
+  - numpy=1.16.2
