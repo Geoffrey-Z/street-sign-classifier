@@ -1,0 +1,5 @@
+#! /bin/bash
+
+. /anaconda3/etc/profile.d/conda.sh
+conda activate street-sign-classifier
+jupyter notebook
