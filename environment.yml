@@ -6,3 +6,4 @@ dependencies:
   - pandas=0.24.1
   - keras=2.2.4
   - numpy=1.16.2
+  - scikit-image=0.14.2

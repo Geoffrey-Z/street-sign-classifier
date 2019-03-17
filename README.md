@@ -11,8 +11,8 @@ https://github.com/badriadhikari/2019-Spring-DL/tree/master/project
 |       |              | Setup GitHub repo                    | ✅     |
 |       |              | Create Todo outline                  | ✅     |
 |       |              | Install dependencies                 | ✅     |
-| **2** | **March 10** | Find street sign image dataset       |        |
-|       |              | Create script to download dataset    |        |
+| **2** | **March 10** | Find street sign image dataset       | ✅     |
+|       |              | Create script to download dataset    | ✅     |
 |       |              | Create pipeline to preprocess images | ?      |
 |       |              | Create basic Keras model             | ?      |
 | **3** | **March 17** |                                      |        |
@@ -26,8 +26,11 @@ https://github.com/badriadhikari/2019-Spring-DL/tree/master/project
 ## Conda Virtual Environment Commands
 
 ```bash
-# Create/Update the environment
+# Create the environment
 conda env create -f environment.yml
+
+# Update the environment
+conda env update -f environment.yml
 
 # Activate the environment
 conda activate street-sign-classifier
