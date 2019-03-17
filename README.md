@@ -1,3 +1,7 @@
+## Evaluation Criteria
+
+https://github.com/badriadhikari/2019-Spring-DL/tree/master/project
+
 ## Project Schedule Outline
 
 | Week  | Date         | Todo                                 | Status |
@@ -42,4 +46,10 @@ conda deactivate
 
 ```bash
 ./start
+```
+
+## Download Datasets to `./data`
+
+```bash
+./download_data.py
 ```
