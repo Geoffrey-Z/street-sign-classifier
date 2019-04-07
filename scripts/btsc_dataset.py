@@ -1,9 +1,9 @@
-import numpy as np
+import numpy as np  # pylint: disable=import-error
 
-from skimage.transform import resize as skimage_resize  # pylint: disable=import-error
 from skimage.data import imread as skimage_read  # pylint: disable=import-error
 from os.path import join
 
+from utils import resize_image
 from fs_utils import list_subdirs, list_files, PROJ_ROOT
 
 
@@ -20,16 +20,16 @@ def _load(data_dir):
     return dataset
 
 
-def load_training(size=None):
+def load_training():
     return _load(f'{PROJ_ROOT}/data/btsc/training/Training')
 
 
-def load_testing(size=None):
+def load_testing():
     return _load(f'{PROJ_ROOT}/data/btsc/testing/Testing')
 
 
-def resize_image(image, size):
-    return skimage_resize(image, (size, size), mode='constant', anti_aliasing=True)
+def load_full_dataset():
+    return load_training() + load_testing()
 
 
 def resize_images(image_data, size=None):

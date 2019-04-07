@@ -7,7 +7,7 @@ https://github.com/Hopding/street-sign-classifier
 
 ## Evaluation Criteria
 
-https://github.com/badriadhikari/2019-Spring-DL/tree/master/project
+https://github.com/badriadhikari/2019-Spring-DL/tree/master/project_guidelines
 
 ## Project Schedule Outline
 
@@ -26,7 +26,7 @@ https://github.com/badriadhikari/2019-Spring-DL/tree/master/project
 | **4** | **March 24** | --------------------------------- |        |
 | **5** | **March 31** | --------------------------------- |        |
 | **6** | **April 7**  | Normalize image sizes             | ✅     |
-|       |              | Create basic Keras model          | ?      |
+|       |              | Create basic Keras model          | ✅     |
 | **7** | **April 14** |                                   |        |
 | **8** | **April 21** |                                   |        |
 | **9** | **April 28** |                                   |        |
