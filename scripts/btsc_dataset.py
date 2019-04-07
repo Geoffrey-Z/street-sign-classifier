@@ -1,3 +1,5 @@
+import numpy as np
+
 from skimage.transform import resize as skimage_resize  # pylint: disable=import-error
 from skimage.data import imread as skimage_read  # pylint: disable=import-error
 from os.path import join
@@ -47,4 +49,4 @@ def split_images_and_labels(image_data):
     for instance in image_data:
         images.append(instance['data'])
         labels.append(instance['label'])
-    return (images, labels)
+    return (np.array(images), np.array(labels))
