@@ -1,4 +1,5 @@
-from skimage.data import imread
+from skimage.transform import resize as skimage_resize  # pylint: disable=import-error
+from skimage.data import imread as skimage_read  # pylint: disable=import-error
 from os.path import join
 
 from fs_utils import list_subdirs, list_files, PROJ_ROOT
@@ -11,7 +12,7 @@ def _load(data_dir):
         for file_name in files:
             file_path = join(data_dir, subdir, file_name)
             dataset.append({
-                'data': imread(file_path),
+                'data': skimage_read(file_path),
                 'label': subdir
             })
     return dataset
@@ -25,5 +26,5 @@ def load_testing():
     return _load(f'{PROJ_ROOT}/data/btsc/testing/Testing')
 
 
-# dataset = load_training()
-# print(dataset)
+def resize_image(image, size):
+    return skimage_resize(image, (size, size), mode='constant', anti_aliasing=True)

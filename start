@@ -1,5 +1,25 @@
 #! /bin/bash
+set -e
 
-. /anaconda3/etc/profile.d/conda.sh
+# (1) Figure out where `conda` is installed (Anaconda or Miniconda)
+if [[ -d "/anaconda3" ]]; then
+  CONDA_DIR="/anaconda3"
+elif [[ -d "$HOME/anaconda3" ]]; then
+  CONDA_DIR="$HOME/anaconda3"
+elif [[ -d "$HOME/miniconda" ]]; then
+  CONDA_DIR="$HOME/miniconda"
+else
+  echo "Could not find anaconda3 or miniconda installation. Exiting."
+  exit 1
+fi
+
+# (2) Get `conda` added to path so we can use it below
+if [[ -f "$CONDA_DIR/etc/profile.d/conda.sh" ]]; then
+  . "$CONDA_DIR/etc/profile.d/conda.sh"
+else
+  export PATH="$CONDA_DIR/bin:$PATH"
+fi
+
 conda activate street-sign-classifier
-jupyter notebook
+
+KERAS_BACKEND=tensorflow jupyter notebook

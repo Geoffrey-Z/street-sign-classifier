@@ -22,11 +22,11 @@ https://github.com/badriadhikari/2019-Spring-DL/tree/master/project
 |       |              | Create script to download dataset | ✅     |
 |       |              | Create scripts to load dataset    | ✅     |
 |       |              | Plot dataset in Jupyter notebook  | ✅     |
-| **3** | **March 17** | Normalize image sizes             | ?      |
+| **3** | **March 17** | --------------------------------- |        |
+| **4** | **March 24** | --------------------------------- |        |
+| **5** | **March 31** | --------------------------------- |        |
+| **6** | **April 7**  | Normalize image sizes             | ✅     |
 |       |              | Create basic Keras model          | ?      |
-| **4** | **March 24** |                                   |        |
-| **5** | **March 31** |                                   |        |
-| **6** | **April 7**  |                                   |        |
 | **7** | **April 14** |                                   |        |
 | **8** | **April 21** |                                   |        |
 | **9** | **April 28** |                                   |        |
