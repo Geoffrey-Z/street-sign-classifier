@@ -1,10 +1,5 @@
 https://github.com/Hopding/street-sign-classifier
 
-- https://medium.com/@waleedka/traffic-sign-recognition-with-tensorflow-629dffc391a6
-- https://github.com/waleedka/traffic-signs-tensorflow/blob/master/notebook1.ipynb
-- https://btsd.ethz.ch/shareddata/
-- http://cvrr.ucsd.edu/LISA/lisa-traffic-sign-dataset.html
-
 ## Evaluation Criteria
 
 https://github.com/badriadhikari/2019-Spring-DL/tree/master/project_guidelines
@@ -27,6 +22,8 @@ https://github.com/badriadhikari/2019-Spring-DL/tree/master/project_guidelines
 | **5** | **March 31** | --------------------------------- |        |
 | **6** | **April 7**  | Normalize image sizes             | ✅     |
 |       |              | Create basic Keras model          | ✅     |
+|       |              | Tweak Keras model                 | ✅     |
+|       |              | Begin writing report              | ✅     |
 | **7** | **April 14** |                                   |        |
 | **8** | **April 21** |                                   |        |
 | **9** | **April 28** |                                   |        |
@@ -64,3 +61,14 @@ conda deactivate
 ```bash
 ./download_data.py
 ```
+
+# Datasets
+
+- https://btsd.ethz.ch/shareddata/
+- http://cvrr.ucsd.edu/LISA/lisa-traffic-sign-dataset.html
+
+## References
+
+- https://medium.com/@waleedka/traffic-sign-recognition-with-tensorflow-629dffc391a6
+- https://towardsdatascience.com/image-classification-python-keras-tutorial-kaggle-challenge-45a6332a58b8
+- https://medium.com/nybles/create-your-first-image-recognition-classifier-using-cnn-keras-and-tensorflow-backend-6eaab98d14dd
