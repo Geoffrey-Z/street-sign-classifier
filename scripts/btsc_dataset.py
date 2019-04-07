@@ -18,13 +18,33 @@ def _load(data_dir):
     return dataset
 
 
-def load_training():
+def load_training(size=None):
     return _load(f'{PROJ_ROOT}/data/btsc/training/Training')
 
 
-def load_testing():
+def load_testing(size=None):
     return _load(f'{PROJ_ROOT}/data/btsc/testing/Testing')
 
 
 def resize_image(image, size):
     return skimage_resize(image, (size, size), mode='constant', anti_aliasing=True)
+
+
+def resize_images(image_data, size=None):
+    assert isinstance(size, int), 'size must be an integer'
+    resized_images = []
+    for image_datum in image_data:
+        resized_images.append({
+            'data': resize_image(image_datum['data'], size),
+            'label': image_datum['label']
+        })
+    return resized_images
+
+
+def split_images_and_labels(image_data):
+    images = []
+    labels = []
+    for instance in image_data:
+        images.append(instance['data'])
+        labels.append(instance['label'])
+    return (images, labels)
