@@ -1,4 +1,10 @@
 https://github.com/Hopding/street-sign-classifier
+http://alexlenail.me/NN-SVG/LeNet.html
+
+# TODO:
+
+- Normalize image pixels
+- Draw histogram of RGB per class?
 
 ## Evaluation Criteria
 
