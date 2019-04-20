@@ -1,6 +1,38 @@
 #! /bin/bash
 set -e
 
+function download_data_if_needed {
+  if [[ ! -d data ]]; then
+    ./download_data.py
+  else
+    min_expected_data_size_in_bytes=700000
+    data_size_in_bytes=$(du -s data | cut -f1)
+    if [[ $data_size_in_bytes -lt $min_expected_data_size_in_bytes ]]; then
+      ./download_data.py
+    fi
+  fi
+}
+
+function create_or_update_conda_env {
+  set +e
+
+  # Try to create the virtual environment for the first time
+  echo "Creating virtual environment..."
+  create_res=$(conda env create -f environment.yml 2>&1)
+
+  # If the virtual environment already exists, then update it
+  if [[ $create_res == *"prefix already exists:"* ]]; then
+    echo "Virtual environment already exists."
+    echo "Updating virtual environment..."
+    updates_res=$(conda env update -f environment.yml  2>&1)
+    echo "Virtual environment updated."
+  else
+    echo "Virtual environment created."
+  fi
+
+  set -e
+}
+
 # (1) Figure out where `conda` is installed (Anaconda or Miniconda)
 if [[ -d "/anaconda3" ]]; then
   CONDA_DIR="/anaconda3"
@@ -20,6 +52,12 @@ else
   export PATH="$CONDA_DIR/bin:$PATH"
 fi
 
+download_data_if_needed
+
+create_or_update_conda_env
+
+echo "Activating virtual environment..."
 conda activate street-sign-classifier
 
+echo "Starting Jupyter notebook..."
 jupyter notebook

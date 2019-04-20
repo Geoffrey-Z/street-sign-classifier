@@ -1,6 +1,6 @@
 # `street-sign-classifier`
 
-This project fulfills the requirements for the [UMSL CS5390 project](https://github.com/badriadhikari/2019-Spring-DL/tree/master/project_guidelines). It implements a street sign classifier using deep learning.
+This project fulfills the requirements for [UMSL's CS5390 project](https://github.com/badriadhikari/2019-Spring-DL/tree/master/project_guidelines). It implements a street sign classifier using deep learning.
 
 ## Report
 
@@ -29,39 +29,41 @@ This should open the Jupyter file explorer in a new browser tab. Navigate to the
 
 Stuff and thingz...
 
-## Download Datasets to `./data`
+## Command Reference
 
-```bash
-./download_data.py
-```
+- **Download Datasets to `./data`**
 
-## Start Jupyter in Virtual Environment
+  ```bash
+  ./download_data.py
+  ```
 
-```bash
-./start
-```
+- **Start Jupyter in Virtual Environment**
 
-## Conda Virtual Environment Commands
+  ```bash
+  ./start
+  ```
 
-```bash
-# Create the environment
-conda env create -f environment.yml
+- **Conda Virtual Environment Commands**
 
-# Update the environment
-conda env update -f environment.yml
+  ```bash
+  # Create the environment
+  conda env create -f environment.yml
 
-# Activate the environment
-conda activate street-sign-classifier
+  # Update the environment
+  conda env update -f environment.yml
 
-# Search for dependency and version
-conda search [dependency]
+  # Activate the environment
+  conda activate street-sign-classifier
 
-# Add a package to the environment
-<Manually open the environment.yml and add it>
+  # Search for dependency and version
+  conda search [dependency]
 
-# Deactivate the environment
-conda deactivate
-```
+  # Add a package to the environment
+  <Manually open the environment.yml and add it>
+
+  # Deactivate the environment
+  conda deactivate
+  ```
 
 ## Datasets
 
