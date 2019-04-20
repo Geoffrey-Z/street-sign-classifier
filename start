@@ -41,7 +41,8 @@ elif [[ -d "$HOME/anaconda3" ]]; then
 elif [[ -d "$HOME/miniconda" ]]; then
   CONDA_DIR="$HOME/miniconda"
 else
-  echo "Could not find anaconda3 or miniconda installation. Exiting."
+  echo "Could not find anaconda3 or miniconda installation."
+  echo "Exiting."
   exit 1
 fi
 

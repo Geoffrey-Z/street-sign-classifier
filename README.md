@@ -6,30 +6,49 @@ This project fulfills the requirements for [UMSL's CS5390 project](https://githu
 
 The report for this project can be viewed [here](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/street_sign_classifier_report.ipynb).
 
+## Prerequisites
+
+- This project uses [`conda`](https://conda.io/en/latest/) for package management. If you do not already have `conda` installed on your system, you can get it by installing [Miniconda](https://docs.conda.io/en/latest/miniconda.html) or [Anaconda](https://docs.anaconda.com/anaconda/install/).
+- This project is written in [Python 3.6](https://www.python.org/downloads/release/python-360/). Make sure you have this version of Python (or greater) installed on your system.
+
 ## Quick Start
 
-> **Note:** This section only works for Mac and Linux machines. If you are on Windows, you can try using the [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq). Otherwise, use the [Slow Start](#slow-start) section instead.
+> **Note:** This section only works for Mac and Linux machines. If you are on Windows, you can try using the [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq). Otherwise, use the [Manual Start](#manual-start) section instead.
 
-To download the data and run the Jupyter notebooks for this project, run the following commands:
+To download the data and dependencies, and then run the Jupyter notebooks for this project, run the following command:
 
 ```bash
-# Download street sign image dataset
-./download_data.py
-
-# Install dependencies
-conda env create -f environment.yml
-
-# Start the Jupyter Notebook server
 ./start
 ```
 
 This should open the Jupyter file explorer in a new browser tab. Navigate to the `notebooks/` directory. From here, you can open and run the EDA (`btsc_dataset_eda.ipynb`) or Keras model (`keras_model.ipynb`) notebooks.
 
-## Slow Start
+## Manual Start
 
-Stuff and thingz...
+1. Download image dataset:
+   ```bash
+   ./download_data.py
+   ```
+2. Create the virtual environment:
+   ```bash
+   conda env create -f environment.yml
+   ```
+3. Start the virtual environment:
+   ```bash
+   conda activate street-sign-classifier
+   ```
+4. Start the Jupyter notebook:
+   ```bash
+   jupyter notebook
+   ```
 
 ## Command Reference
+
+- **Download Data & Dependencies, and Start Jupyter**
+
+  ```bash
+  ./start # Only works on Mac and Linux machines
+  ```
 
 - **Download Datasets to `./data`**
 
@@ -37,10 +56,10 @@ Stuff and thingz...
   ./download_data.py
   ```
 
-- **Start Jupyter in Virtual Environment**
+- **Start Jupyter**
 
   ```bash
-  ./start
+  jupyter notebook
   ```
 
 - **Conda Virtual Environment Commands**
