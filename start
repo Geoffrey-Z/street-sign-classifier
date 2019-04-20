@@ -24,7 +24,7 @@ function create_or_update_conda_env {
   if [[ $create_res == *"prefix already exists:"* ]]; then
     echo "Virtual environment already exists."
     echo "Updating virtual environment..."
-    updates_res=$(conda env update -f environment.yml  2>&1)
+    updates_res=$(conda env update -f environment.yml 2>&1)
     echo "Virtual environment updated."
   else
     echo "Virtual environment created."

@@ -15,7 +15,7 @@ The report for this project can be viewed [here](https://github.com/Hopding/stre
 
 > **Note:** This section only works for Mac and Linux machines. If you are on Windows, you can try using the [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq). Otherwise, use the [Manual Start](#manual-start) section instead.
 
-To download the data and dependencies, and then run the Jupyter notebooks for this project, run the following command:
+To automatically download the data and dependencies and run the Jupyter notebooks for this project, run the following command:
 
 ```bash
 ./start
