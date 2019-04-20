@@ -3,7 +3,6 @@ http://alexlenail.me/NN-SVG/LeNet.html
 
 # TODO:
 
-- Normalize image pixels
 - Draw histogram of RGB per class?
 
 ## Evaluation Criteria
