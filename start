@@ -22,4 +22,4 @@ fi
 
 conda activate street-sign-classifier
 
-KERAS_BACKEND=tensorflow jupyter notebook
+jupyter notebook

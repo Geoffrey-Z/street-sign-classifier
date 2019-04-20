@@ -1,37 +1,45 @@
-https://github.com/Hopding/street-sign-classifier
-http://alexlenail.me/NN-SVG/LeNet.html
+# `street-sign-classifier`
 
-# TODO:
+This project fulfills the requirements for the [UMSL CS5390 project](https://github.com/badriadhikari/2019-Spring-DL/tree/master/project_guidelines). It implements a street sign classifier using deep learning.
 
-- Draw histogram of RGB per class?
+## Report
 
-## Evaluation Criteria
+The report for this project can be viewed [here](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/street_sign_classifier_report.ipynb).
 
-https://github.com/badriadhikari/2019-Spring-DL/tree/master/project_guidelines
+## Quick Start
 
-## Project Schedule Outline
+> **Note:** This section only works for Mac and Linux machines. If you are on Windows, you can try using the [WSL](https://docs.microsoft.com/en-us/windows/wsl/faq). Otherwise, use the [Slow Start](#slow-start) section instead.
 
-| Week  | Date         | Todo                              | Status |
-| ----- | ------------ | --------------------------------- | ------ |
-| 1     | March 3      | Read requirements                 | ✅     |
-|       |              | Decide on project                 | ✅     |
-|       |              | Setup GitHub repo                 | ✅     |
-|       |              | Create Todo outline               | ✅     |
-|       |              | Install dependencies              | ✅     |
-| **2** | **March 10** | Find street sign image dataset    | ✅     |
-|       |              | Create script to download dataset | ✅     |
-|       |              | Create scripts to load dataset    | ✅     |
-|       |              | Plot dataset in Jupyter notebook  | ✅     |
-| **3** | **March 17** | --------------------------------- |        |
-| **4** | **March 24** | --------------------------------- |        |
-| **5** | **March 31** | --------------------------------- |        |
-| **6** | **April 7**  | Normalize image sizes             | ✅     |
-|       |              | Create basic Keras model          | ✅     |
-|       |              | Tweak Keras model                 | ✅     |
-|       |              | Begin writing report              | ✅     |
-| **7** | **April 14** |                                   |        |
-| **8** | **April 21** |                                   |        |
-| **9** | **April 28** |                                   |        |
+To download the data and run the Jupyter notebooks for this project, run the following commands:
+
+```bash
+# Download street sign image dataset
+./download_data.py
+
+# Install dependencies
+conda env create -f environment.yml
+
+# Start the Jupyter Notebook server
+./start
+```
+
+This should open the Jupyter file explorer in a new browser tab. Navigate to the `notebooks/` directory. From here, you can open and run the EDA (`btsc_dataset_eda.ipynb`) or Keras model (`keras_model.ipynb`) notebooks.
+
+## Slow Start
+
+Stuff and thingz...
+
+## Download Datasets to `./data`
+
+```bash
+./download_data.py
+```
+
+## Start Jupyter in Virtual Environment
+
+```bash
+./start
+```
 
 ## Conda Virtual Environment Commands
 
@@ -55,19 +63,7 @@ conda search [dependency]
 conda deactivate
 ```
 
-## Start Jupyter in Virtual Environment
-
-```bash
-./start
-```
-
-## Download Datasets to `./data`
-
-```bash
-./download_data.py
-```
-
-# Datasets
+## Datasets
 
 - https://btsd.ethz.ch/shareddata/
 - http://cvrr.ucsd.edu/LISA/lisa-traffic-sign-dataset.html
