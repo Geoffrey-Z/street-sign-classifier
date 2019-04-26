@@ -15,7 +15,7 @@ The BelgiumTS dataset was selected due to its simplicity and smaller size. The L
 
 ## Splitting
 
-The BelgiumTS dataset is pre-split into training and test sets upon download. This would be convenient if we only needed a training and test set. However, we also need a validation set. So instead of using the pre-split data, we merge them back together into a single dataset. We then randomly split this merged dataset into training (60%), validation (20%), and test (20%) sets.
+The BelgiumTS dataset is pre-split into training and test sets upon download. This would be convenient if only training and test sets were needed. However, a validation set is also necessary. So instead of using the pre-split data, I merged them back together into a single dataset. I then randomly split this merged dataset into training (60%), validation (20%), and test (20%) sets.
 
 ## Resizing
 
@@ -25,7 +25,7 @@ The BelgiumTS dataset contains 62 classes of street signs, with 7095 images in t
 
 As you can see from the visualization, the images do not have a standard size. This means that the images must be resized to a standard width and height before they can be fed as input to a neural network.
 
-We resized the images to 32x32 pixels. This was done using `scikit-image`. A few different sizes were tested: 16x16, 32x32, and 64x64. We found that 32x32 gave us the same accuracy as 64x64, while being faster to train with. 16x16 was ruled out because the it resulted in the DNN being ~3% less accurate than with 32x32.
+I resized the images to 32x32 pixels. This was done using `scikit-image`. A few different sizes were tested: 16x16, 32x32, and 64x64. I found that 32x32 gave us the same accuracy as 64x64, while being faster to train with. 16x16 was ruled out because the it resulted in the DNN being ~3% less accurate than with 32x32.
 
 ## Network Architecture
 
