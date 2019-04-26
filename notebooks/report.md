@@ -72,17 +72,19 @@ Listed below are some articles and papers documenting traffic sign classificatio
 ## Learning Curves
 
 Shown below is a plot of the model's accuracy on the training and validation datasets per epoch during training.
-<img src="assets/basic-accuracy-per-epoch.png" width="400" style="margin: 15px">
+
+![Accuracy Per Epoch](assets/basic-accuracy-per-epoch.png)
 
 Shown below is a plot of the model's loss on the training and validation datasets per epoch during training.
-<img src="assets/basic-loss-per-epoch.png" width="400" style="margin: 15px">
+
+![Loss Per Epoch](assets/basic-loss-per-epoch.png)
 
 ## Training Time
 
 The relationship between training time and number of epochs is linear.
 
-<img src="assets/epoch-training-time.png" width="400" style="margin: 15px">
+![Epoch Training Time](assets/epoch-training-time.png)
 
 The relationship between training time and dataset size is also linear.
 
-<img src="assets/data-set-size-training-time.png" width="400" style="margin: 15px">
+![Data Set Size Training Time](assets/data-set-size-training-time.png)

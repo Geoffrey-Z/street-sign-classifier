@@ -64,6 +64,12 @@ This should open the Jupyter file explorer in a new browser tab. Once it does, t
   jupyter notebook
   ```
 
+- **Generate PDF Reports**
+
+  ```bash
+  ./report
+  ```
+
 - **Conda Virtual Environment Commands**
 
   ```bash

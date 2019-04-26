@@ -1,0 +1,71 @@
+#! /bin/bash
+
+### Activate conda environment
+
+if [[ -d "/anaconda3" ]]; then
+  CONDA_DIR="/anaconda3"
+elif [[ -d "$HOME/anaconda3" ]]; then
+  CONDA_DIR="$HOME/anaconda3"
+elif [[ -d "$HOME/miniconda" ]]; then
+  CONDA_DIR="$HOME/miniconda"
+else
+  echo "Could not find anaconda3 or miniconda installation."
+  echo "Exiting."
+  exit 1
+fi
+
+if [[ -f "$CONDA_DIR/etc/profile.d/conda.sh" ]]; then
+  . "$CONDA_DIR/etc/profile.d/conda.sh"
+else
+  export PATH="$CONDA_DIR/bin:$PATH"
+fi
+
+conda activate street-sign-classifier
+
+cd notebooks
+
+### Generate report.pdf
+
+REPORT_MD=$(cat report.md)
+
+FRONT_MATTER="
+---
+title: Street Sign Classifier Report
+author: Andrew Dillon
+geometry: margin=0.5cm
+fontsize: 12pt
+numbersections: true
+---
+
+"
+
+TEMP_PDF_MD="$FRONT_MATTER$REPORT_MD"
+
+echo "$TEMP_PDF_MD" > temp-report.md
+
+pandoc -f markdown-implicit_figures -o ../report.pdf temp-report.md
+
+rm temp-report.md
+
+### Generate report_update.pdf
+
+REPORT_MD_UPDATE=$(cat report_update.md)
+
+FRONT_MATTER_UPDATE="
+---
+title: Street Sign Classifier Report - Update
+author: Andrew Dillon
+geometry: margin=0.5cm
+fontsize: 12pt
+numbersections: true
+---
+
+"
+
+TEMP_PDF_MD_UPDATE="$FRONT_MATTER_UPDATE$REPORT_MD_UPDATE"
+
+echo "$TEMP_PDF_MD_UPDATE" > temp-report.md
+
+pandoc -f markdown-implicit_figures -o ../report_update.pdf temp-report.md
+
+rm temp-report.md
