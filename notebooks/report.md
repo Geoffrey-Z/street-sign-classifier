@@ -15,7 +15,7 @@ The BelgiumTS dataset was selected due to its simplicity and smaller size. The L
 
 ## Splitting
 
-The BelgiumTS dataset is pre-split into training and test sets upon download. This would be convenient if we only needed a training and test set. However, we also need a validation set. So instead of using the pre-split data, we merge them back together into a single dataset. We then randomly split this merged dataset into training (60%), validation (20%), and test (20%) sets.
+The BelgiumTS dataset is pre-split into training and test sets upon download. This would be convenient if only training and test sets were needed. However, a validation set is also necessary. So instead of using the pre-split data, I merged them back together into a single dataset. I then randomly split this merged dataset into training (60%), validation (20%), and test (20%) sets.
 
 ## Resizing
 
@@ -25,11 +25,11 @@ The BelgiumTS dataset contains 62 classes of street signs, with 7095 images in t
 
 As you can see from the visualization, the images do not have a standard size. This means that the images must be resized to a standard width and height before they can be fed as input to a neural network.
 
-We resized the images to 32x32 pixels. This was done using `scikit-image`. A few different sizes were tested: 16x16, 32x32, and 64x64. We found that 32x32 gave us the same accuracy as 64x64, while being faster to train with. 16x16 was ruled out because the it resulted in the DNN being ~3% less accurate than with 32x32.
+I resized the images to 32x32 pixels. This was done using `scikit-image`. A few different sizes were tested: 16x16, 32x32, and 64x64. I found that 32x32 gave the same accuracy as 64x64, while being faster to train with. 16x16 was ruled out because the it resulted in the DNN being ~3% less accurate than with 32x32.
 
 ## Network Architecture
 
-I used a dconvolutional network model to classify the street signs. I chose this type of model because they are known to perform quite well on image datasets, such as MNIST and ImageNet. The architecture of the final version of the Keras model is shown below.
+I used a convolutional network to classify the street signs. I chose this type of model because they are known to perform quite well on image datasets, such as MNIST and ImageNet. The architecture of the final version of the Keras model is shown below.
 
 ```python
 model = Sequential()
@@ -43,7 +43,7 @@ model.add(Dense(62, activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 ```
 
-This architecture is a relatively simple convolutional network. It achieves an accuracy of ~96% on the validation dataset. This model was the most accurate and simple model to arise from a few different variants. Listed below are some of the variants I tried out.
+This architecture is a relatively simple convolutional network. It achieves an accuracy of ~96% on the validation dataset. This was the simplest and most accurate model out of several variants I tried. Listed below are some of the variants I tried out.
 
 - Decreasing the number of filters in the first convolutional layer from 64 to 16. This resulted in a faster training time. However, the accuracy decreased by ~2%.
 - Decreasing the number of filters in the first convolutional layer from 64 to 32. This resulted in a faster training time. However, the accuracy decreased by ~1%.

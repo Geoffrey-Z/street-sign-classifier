@@ -23,7 +23,7 @@ To automatically download the data and dependencies and run the Jupyter notebook
 ./start
 ```
 
-This should open the Jupyter file explorer in a new browser tab. Navigate to the `notebooks/` directory. From here, you can open and run the EDA (`btsc_dataset_eda.ipynb`) or Keras model (`models/*.ipynb`) notebooks.
+This should open the Jupyter file explorer in a new browser tab. Once it does, try navigating to the `notebooks/` directory. From here, you can open and run the EDA (`eda.ipynb`) or Keras model (`models/*.ipynb`) notebooks.
 
 ## Manual Start
 
