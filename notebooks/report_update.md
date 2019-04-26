@@ -13,9 +13,11 @@ I was able to achieve an accuracy of 97-98% with a ~0.11 loss on the test datase
 The initial layers of the network are copied from the VGG19 network. The weights of the bottom seven layers are frozen. A single convolutional layer and a couple of dense layers are stacked on top of this. These layers are not frozen during training.
 
 Shown below is a plot of the improved model's accuracy on the training and validation datasets per epoch during training.
+
 <img src="assets/final-accuracy-per-epoch.png" width="400" style="margin: 15px">
 
 Shown below is a plot of the improved model's loss on the training and validation datasets per epoch during training.
+
 <img src="assets/final-loss-per-epoch.png" width="400" style="margin: 15px">
 
 The improved model is available [here](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/final_model.ipynb)
