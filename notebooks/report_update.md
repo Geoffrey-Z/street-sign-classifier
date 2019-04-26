@@ -1,6 +1,6 @@
 # Street Sign Classifier Report - Update
 
-This notebook is an update to the [original project report](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/report.ipynb)
+This notebook is an update to the [original project report](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/report.md)
 
 ## Original Model
 
@@ -20,7 +20,7 @@ Shown below is a plot of the improved model's loss on the training and validatio
 
 <img src="assets/final-loss-per-epoch.png" width="400" style="margin: 15px">
 
-The improved model is available [here](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/final_model.ipynb)
+The improved model is available [here](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/models/final_model.ipynb)
 
 ## Image Augmentation
 
@@ -34,4 +34,4 @@ I also tried using image augmentation in the improved model. This, however, did 
 | `width_shift_range=0.2`              | no effect          |
 | `height_shift_range=0.2`             | no effect          |
 
-The model I built using image augmentation is available [here](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/vgg19_augmentation_model.ipynb)
+The model I built using image augmentation is available [here](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/models/vgg19_augmentation_model.ipynb)
