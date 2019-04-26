@@ -2,7 +2,7 @@
 
 This project implements a street sign classifier using deep learning. This project is written in Python 3.6. The `keras`, `tensorflow`, and `scikit-learn` packages were used to build the model. Data visualization and preprocessing was done with the `matplotlib` and `scikit-image` packages.
 
-**Note:** Please also read the update to this report [here](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/report_update.ipynb).
+**Note:** Please also read the update to this report [here](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/report_update.md).
 
 ## Dataset
 
@@ -29,7 +29,7 @@ We resized the images to 32x32 pixels. This was done using `scikit-image`. A few
 
 ## Network Architecture
 
-I used a deep convolutional network model to classify the street signs. I chose this type of model because they are known to perform quite well on image datasets, such as MNIST and ImageNet. The architecture of the final version of the Keras model is shown below.
+I used a dconvolutional network model to classify the street signs. I chose this type of model because they are known to perform quite well on image datasets, such as MNIST and ImageNet. The architecture of the final version of the Keras model is shown below.
 
 ```python
 model = Sequential()
@@ -43,7 +43,7 @@ model.add(Dense(62, activation='softmax'))
 model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
 ```
 
-This architecture is a relatively simple deep convolutional network. It achieves an accuracy of ~96% on the validation dataset. This model was the most accurate and simple model to arise from a few different variants. Listed below are some of the variants I tried out.
+This architecture is a relatively simple convolutional network. It achieves an accuracy of ~96% on the validation dataset. This model was the most accurate and simple model to arise from a few different variants. Listed below are some of the variants I tried out.
 
 - Decreasing the number of filters in the first convolutional layer from 64 to 16. This resulted in a faster training time. However, the accuracy decreased by ~2%.
 - Decreasing the number of filters in the first convolutional layer from 64 to 32. This resulted in a faster training time. However, the accuracy decreased by ~1%.
