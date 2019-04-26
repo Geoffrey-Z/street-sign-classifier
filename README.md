@@ -4,7 +4,9 @@ This project fulfills the requirements for [UMSL's CS5390 project](https://githu
 
 ## Report
 
-The report for this project can be viewed [here](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/street_sign_classifier_report.ipynb).
+The original report for this project can be viewed [here](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/report.ipynb).
+
+The update to the original report can be viewed [here](https://github.com/Hopding/street-sign-classifier/blob/master/notebooks/report_update.ipynb).
 
 ## Prerequisites
 
@@ -21,7 +23,7 @@ To automatically download the data and dependencies and run the Jupyter notebook
 ./start
 ```
 
-This should open the Jupyter file explorer in a new browser tab. Navigate to the `notebooks/` directory. From here, you can open and run the EDA (`btsc_dataset_eda.ipynb`) or Keras model (`keras_model.ipynb`) notebooks.
+This should open the Jupyter file explorer in a new browser tab. Navigate to the `notebooks/` directory. From here, you can open and run the EDA (`btsc_dataset_eda.ipynb`) or Keras model (`models/*.ipynb`) notebooks.
 
 ## Manual Start
 
@@ -94,3 +96,5 @@ This should open the Jupyter file explorer in a new browser tab. Navigate to the
 - https://medium.com/@waleedka/traffic-sign-recognition-with-tensorflow-629dffc391a6
 - https://towardsdatascience.com/image-classification-python-keras-tutorial-kaggle-challenge-45a6332a58b8
 - https://medium.com/nybles/create-your-first-image-recognition-classifier-using-cnn-keras-and-tensorflow-backend-6eaab98d14dd
+- https://riptutorial.com/keras/example/32608/transfer-learning-using-keras-and-vgg
+- https://stackoverflow.com/a/48286003
